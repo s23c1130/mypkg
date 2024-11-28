@@ -6,8 +6,8 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-source ~/ros2_ws/install/setup.bash
-source ~/ros2_ws/install/local_setup.bash
+source $dir/ros2_ws/install/setup.bash
+source $dir/ros2_ws/install/local_setup.bash
 
 timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
