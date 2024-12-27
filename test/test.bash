@@ -8,6 +8,7 @@ sudo apt -y install xdotool
 sudo apt -y install xvfb
 sudo apt -y install pip
 pip install pyautogui
+pip install python-xlib
 
 Xvfb -ac :99 -screen 0 1280x1024x24 &
 export DISPLAY=:99
