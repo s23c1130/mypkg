@@ -20,6 +20,8 @@ y=`xdotool getmouselocation | awk '{print substr($2, 3)}'`
 
 x_y="x:${x} y:${y}"
 
+cat /tmp/mypkg.log
+
 grep "${x_y}" /tmp/mypkg.log
 
 if [ $? = 0 ]; then
