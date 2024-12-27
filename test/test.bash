@@ -7,7 +7,7 @@ sudo apt -y update
 sudo apt -y install xdotool
 sudo apt -y install xvfb
 
-Xvfb -ac :99 -screen 1 1280x1024x24
+Xvfb -ac :99 -screen 1 1280x1024x24 &
 export DISPLAY=:99
 
 cd $dir/ros2_ws
