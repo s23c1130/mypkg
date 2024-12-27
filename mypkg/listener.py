@@ -3,9 +3,19 @@ from rclpy.node import Node
 from std_msgs.msg import Int32
 rclpy.init()
 node = Node("listener")
-def cb(msg):
+
+def cb(x_pub):
     global node
-    node.get_logger().info("x:%d y:%d" % ((msg.data >> 16) , (msg.data & 0xFFFF)))
+    node.get_logger().info("x:%d" % x_pub.data)
+        
+
+def cb2(y_pub):
+    global node
+    node.get_logger().info("y:%d" % y_pub.data)
+
+
+
 def main():
-    pub = node.create_subscription(Int32, "countup", cb, 10)
+    x_pub = node.create_subscription(Int32, "x_pos", cb, 10)
+    y_pub = node.create_subscription(Int32, "y_pos", cb2, 10)
     rclpy.spin(node)
