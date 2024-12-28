@@ -48,10 +48,13 @@ chmod +x test_local.bash
  # 謝辞
  プログラムを書く上で、参考にさせていただいたサイトです。ありがとうございました。<BR>
  - [Xvfb を利用したヘッドレスブラウザテスト](https://qiita.com/kt3k/items/cea3c6de3c2337004a84)
- <BR>
  - [pip3 install pyautogui, error code 1](https://stackoverflow.com/questions/48103873/pip3-install-pyautogui-error-code-1)
 
  # ライセンス
+ - ```xdotool```はGPL-3.0 Licenseにて頒布されています。
+   - https://www.gnu.org/licenses/gpl-3.0.ja.html
+ - ```python-xlib```はGPL-2.1 Licenseにて頒布されています。
+   - https://www.gnu.org/licenses/old-licenses/lgpl-2.1.ja.html
  - このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます。
  - このパッケージの一部のコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
    - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html
