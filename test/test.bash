@@ -21,6 +21,7 @@ export DISPLAY=:99
 cd $dir/ros2_ws
 colcon build --packages-select mypkg
 source $dir/.bashrc
+ros2 pkg list
 timeout 3 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 x=`xdotool getmouselocation | awk '{print substr($1, 3)}'`
