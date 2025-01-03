@@ -6,7 +6,7 @@
 [![test](https://github.com/s23c1130/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/s23c1130/mypkg/actions/workflows/test.yml)
 
 # はじめに
-マウスの座標情報を、ROS2のトピック間通信により行います。
+マウスの座標情報を、ROS2を用いて、パブリッシュ（送信）するパッケージです。
 
 # 動作環境
 - 確認環境
@@ -19,12 +19,13 @@
 
 # 導入方法
 ROS2の導入をしていない場合、[この資料の10ページ～](https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html)を参考にして、導入を行ってください。
-<BR>
+今回は、資料に則り、```~/ros2_ws```ワークスペースを作成し、導入してください。(ワークスペースの名前を変更すると、自動化シェルが動作しない場合があります)
+<BR><BR>
 次に、リポジトリのクローンをします。
 ```bash
 mkdir ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone git@github.com:s23c1130/mypkg.git
+git clone https://github.com/s23c1130/mypkg.git
 ```
 次に、```test_local.bash```の実行権限を付与し、実行します。
 ```bash
@@ -36,8 +37,8 @@ chmod +x test_local.bash
 ```test_local.bash```を実行すると、このプログラムの動作に必要な```xdotool```,  ```pip``` , ```pyautogui```, ```python-xlib```が自動でインストールされます。<BR>
 実行すると、パスワードを求められることがあります。パスワードを入力し、続行してください。
 
-# ノード
-マウスの座標を送信します。
+# MousePointPub ノード
+マウスの座標をパブリッシュ（送信）します。
 
 ## トピック
 ### x_pos
@@ -45,10 +46,13 @@ chmod +x test_local.bash
 ### y_pos
  - マウスのY軸座標
 
+# listener ノード
+Github Actions等のテスト用です。
+
  # 謝辞
  プログラムを書く上で、参考にさせていただいたサイトです。ありがとうございました。<BR>
- - [Xvfb を利用したヘッドレスブラウザテスト](https://qiita.com/kt3k/items/cea3c6de3c2337004a84)
- - [pip3 install pyautogui, error code 1](https://stackoverflow.com/questions/48103873/pip3-install-pyautogui-error-code-1)
+ - [Xvfb を利用したヘッドレスブラウザテスト (Qiita)](https://qiita.com/kt3k/items/cea3c6de3c2337004a84)
+ - [pip3 install pyautogui, error code 1 (StackOverflow)](https://stackoverflow.com/questions/48103873/pip3-install-pyautogui-error-code-1)
 
  # ライセンス
  - ```xdotool```はGPL-3.0 Licenseにて頒布されています。

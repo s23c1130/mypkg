@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2024 Toki Makabe <s23c1130sm@s.chibakoudai.jp>
+# SPDX-License-Identifier:BSD-3-Clause
+
 from setuptools import find_packages, setup
 import os
 from glob import glob
@@ -21,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = mypkg.talker:main',
+            'MousePointPub = mypkg.MousePointPub:main',
             'listener = mypkg.listener:main',
         ],
     },
