@@ -22,8 +22,8 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 source install/setup.bash && source install/local_setup.bash
-ros2 pkg list
-timeout 3 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+install/mypkg/lib/mypkg/MousePointPub &
+timeout 3 install/mypkg/lib/mypkg/listener > /tmp/mypkg.log
 
 x=`xdotool getmouselocation | awk '{print substr($1, 3)}'`
 y=`xdotool getmouselocation | awk '{print substr($2, 3)}'`
