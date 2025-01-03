@@ -19,7 +19,7 @@ Xvfb -ac :99 -screen 0 1280x1024x24 &
 export DISPLAY=:99
 
 cd $dir/ros2_ws
-colcon build
+colcon build --packages-select mypkg
 source $dir/.bashrc
 timeout 3 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
