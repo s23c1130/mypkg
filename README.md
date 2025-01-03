@@ -18,8 +18,8 @@
     - Docker ryuichiueda/ubuntu22.04-ros2:latest
 
 # 導入方法
-ROS2の導入をしていない場合、[この資料の10ページ～](https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html)を参考にして、導入を行ってください。
-今回は、資料に則り、```~/ros2_ws```ワークスペースを作成し、導入してください。(ワークスペースの名前を変更すると、自動化シェルが動作しない場合があります)
+ROS2の導入をしていない場合、[この資料の10ページ～](https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html)を参考にして、導入を行ってください。<BR>
+今回は、資料に則り、```~/ros2_ws```ワークスペースを作成し、導入してください。(ワークスペースの名前を変更すると、自動化シェルスクリプトが動作しない場合があります)
 <BR><BR>
 次に、リポジトリのクローンをします。
 ```bash
