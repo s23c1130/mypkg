@@ -18,7 +18,6 @@ pip install python-xlib
 Xvfb -ac :99 -screen 0 1280x1024x24 &
 export DISPLAY=:99
 
-ros2 pkg create mypkg
 cd $dir/ros2_ws
 colcon build --packages-select mypkg
 source $dir/.bashrc
