@@ -6,7 +6,7 @@
 [![test](https://github.com/s23c1130/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/s23c1130/mypkg/actions/workflows/test.yml)
 
 # はじめに
-マウスの座標情報を、ROS2を用いて、パブリッシュ（送信）するパッケージです。
+ROS2を用いて、マウスの座標情報をパブリッシュ（送信）するパッケージです。
 
 # 動作環境
 - 確認環境
