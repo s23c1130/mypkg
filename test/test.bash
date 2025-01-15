@@ -52,6 +52,7 @@ else
     res=1
 fi
 
-sensors
+
+vmstat
 
 exit $res
