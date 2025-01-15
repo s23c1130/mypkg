@@ -12,6 +12,7 @@ sudo apt -y update
 sudo apt -y install xdotool
 sudo apt -y install xvfb
 sudo apt -y install pip
+sudo apt -y install lm-sensors
 pip install pyautogui
 pip install python-xlib
 
@@ -50,5 +51,7 @@ else
     echo Y_POS NG
     res=1
 fi
+
+sensors
 
 exit $res
